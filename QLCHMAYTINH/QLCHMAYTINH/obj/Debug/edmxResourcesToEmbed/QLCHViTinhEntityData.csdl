@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLCHViTinhModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="QLCHViTinhEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="NHANVIENs" EntityType="QLCHViTinhModel.NHANVIEN" />
+    <EntitySet Name="USERs" EntityType="QLCHViTinhModel.USER" />
+  </EntityContainer>
+  <EntityType Name="NHANVIEN">
+    <Key>
+      <PropertyRef Name="MANV" />
+    </Key>
+    <Property Type="String" Name="MANV" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TENNV" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SDT" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="EMAIL" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DCHI" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Type="DateTime" Name="NGAYSINH" Precision="3" />
+    <Property Type="String" Name="CMND" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="USER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="TAIKHOAN" Nullable="false" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="MATKHAU" Nullable="false" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="HOTEN" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="DIACHI" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="EMAIL" MaxLength="30" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="SDT" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="DateTime" Name="NGAYTAO" Precision="3" />
+  </EntityType>
+</Schema>

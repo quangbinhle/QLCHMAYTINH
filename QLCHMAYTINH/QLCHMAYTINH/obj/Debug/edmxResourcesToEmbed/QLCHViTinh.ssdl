@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLCHViTinhModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="QLCHViTinhModelStoreContainer">
+    <EntitySet Name="NHANVIEN" EntityType="QLCHViTinhModel.Store.NHANVIEN" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="USER" EntityType="QLCHViTinhModel.Store.USER" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="NHANVIEN">
+    <Key>
+      <PropertyRef Name="MANV" />
+    </Key>
+    <Property Name="MANV" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="TENNV" Type="nvarchar" MaxLength="30" />
+    <Property Name="SDT" Type="nvarchar" MaxLength="20" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="30" />
+    <Property Name="DCHI" Type="nvarchar" MaxLength="30" />
+    <Property Name="NGAYSINH" Type="datetime" />
+    <Property Name="CMND" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="USER">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="nvarchar" Nullable="false" MaxLength="30" />
+    <Property Name="TAIKHOAN" Type="nvarchar" MaxLength="30" />
+    <Property Name="MATKHAU" Type="nvarchar" MaxLength="30" />
+    <Property Name="TEN" Type="nvarchar" MaxLength="30" />
+    <Property Name="DIACHI" Type="nvarchar" MaxLength="30" />
+    <Property Name="EMAIL" Type="nvarchar" MaxLength="30" />
+  </EntityType>
+</Schema>
